@@ -48,13 +48,13 @@ const ResetPasswordPage: NextPage = () => {
             await axios.patch(`https://nest-prorum.herokuapp.com/api/users/reset-password?token=${token}`, {new_password: password},).then((res) => {
                 toast.success('Password successfully changed');
                 setIsLoading(false);
+                setTimeout(() => {
+                    router.push({pathname:'/'});
+                }, 5000);
             });
         }catch (err: any){
             toast.error(err.response.data.message);
             setIsLoading(false);
-            setTimeout(() => {
-                router.push({pathname:'/'});
-            }, 5000);
         }
     }
 
