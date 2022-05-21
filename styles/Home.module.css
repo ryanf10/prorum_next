@@ -113,6 +113,14 @@
   margin-left: 0.5rem;
 }
 
+.yellow{
+  color: #FFCF00;
+}
+
+.grey{
+  color: #D9D9D9;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
